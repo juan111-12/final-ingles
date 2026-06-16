@@ -1,0 +1,1041 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Carátula – Inglés Técnico I</title>
+  <link rel="icon" type="image/png" href="LOGO.png" />
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Source+Sans+3:wght@300;400;600;700&family=Source+Code+Pro:wght@400;600&display=swap');
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      background: #d6d6d6;
+      font-family: 'Source Sans 3', sans-serif;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      min-height: 100vh;
+      padding: 40px 20px;
+      gap: 40px;
+    }
+
+    /* ── HOJA A4 ── */
+    .page {
+      background: #ffffff;
+      width: 210mm;
+      min-height: 297mm;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 2px 16px rgba(0,0,0,0.22);
+    }
+
+    /* ── INNER WRAPPER (páginas interiores) ── */
+    .inner {
+      padding: 20mm 20mm 18mm 20mm;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+
+    /* ── BANDA SUPERIOR DE COLOR ── */
+    .top-band {
+      height: 6px;
+      background: #1a3a5c;
+      margin-bottom: 20px;
+    }
+
+    /* ── ENCABEZADO INSTITUCIÓN ── */
+    .header {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 24px;
+      padding-bottom: 16px;
+      border-bottom: 1.5px solid #1a3a5c;
+      text-align: center;
+    }
+
+    .inst-info {
+      text-align: left;
+    }
+
+    .logo-box {
+      width: 130px;
+      height: 130px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .logo-box span {
+      font-family: 'EB Garamond', serif;
+      font-size: 30px;
+      font-weight: 700;
+      color: #1a3a5c;
+    }
+
+    .inst-info {
+      flex: 1;
+    }
+
+    .inst-name {
+      font-family: 'EB Garamond', serif;
+      font-size: 15px;
+      font-weight: 700;
+      color: #1a3a5c;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      line-height: 1.4;
+    }
+
+    .inst-sub {
+      font-size: 12px;
+      color: #555;
+      margin-top: 3px;
+      line-height: 1.5;
+    }
+
+    /* ── SPACER FLEXIBLE ── */
+    .spacer { flex: 1; }
+
+    /* ── BLOQUE CENTRAL ── */
+    .center-block {
+      text-align: center;
+      padding: 36px 0 28px;
+      border-bottom: 1px solid #c8c8c8;
+      margin-bottom: 0;
+    }
+
+    .subject-label {
+      font-family: 'Source Code Pro', monospace;
+      font-size: 10px;
+      color: #777;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      margin-bottom: 14px;
+    }
+
+    .main-title {
+      font-family: 'EB Garamond', serif;
+      font-size: 52px;
+      font-weight: 700;
+      color: #1a3a5c;
+      line-height: 1.1;
+      letter-spacing: 1px;
+    }
+
+    .main-title em {
+      font-style: italic;
+      color: #2e6096;
+    }
+
+    .work-title {
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: 15px;
+      font-weight: 400;
+      color: #444;
+      margin-top: 14px;
+      letter-spacing: 0.3px;
+    }
+
+    .work-title strong {
+      font-weight: 700;
+      color: #1a3a5c;
+    }
+
+    /* Línea decorativa bajo el título */
+    .title-rule {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      margin: 20px auto 0;
+      width: 260px;
+    }
+
+    .rule-line {
+      flex: 1;
+      height: 1px;
+      background: #1a3a5c;
+    }
+
+    .rule-sq {
+      width: 5px;
+      height: 5px;
+      background: #1a3a5c;
+    }
+
+    /* ── TABLA DE DATOS ── */
+    .data-section {
+      padding: 32px 0 0;
+    }
+
+    .data-section-title {
+      font-family: 'Source Code Pro', monospace;
+      font-size: 9px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: #999;
+      margin-bottom: 12px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    table tr {
+      border-bottom: 1px solid #e8e8e8;
+    }
+
+    table tr:first-child {
+      border-top: 2px solid #1a3a5c;
+    }
+
+    table tr:last-child {
+      border-bottom: 2px solid #1a3a5c;
+    }
+
+    table td {
+      padding: 9px 4px;
+      font-size: 13px;
+      vertical-align: top;
+    }
+
+    td.label {
+      width: 32%;
+      font-weight: 600;
+      color: #1a3a5c;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      padding-right: 12px;
+    }
+
+    td.colon {
+      width: 4%;
+      color: #aaa;
+      font-weight: 300;
+    }
+
+    td.value {
+      color: #333;
+      font-weight: 400;
+    }
+
+    /* ── OBSERVACIONES ── */
+    .obs-box {
+      margin-top: 28px;
+      border: 1px solid #d0d0d0;
+      padding: 14px 16px;
+      background: #fafafa;
+    }
+
+    .obs-label {
+      font-family: 'Source Code Pro', monospace;
+      font-size: 9px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: #999;
+      margin-bottom: 8px;
+    }
+
+    .obs-lines {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      padding-top: 4px;
+    }
+
+    .obs-line {
+      height: 1px;
+      background: #ddd;
+    }
+
+    /* ── FIRMA ── */
+    .signature-row {
+      display: flex;
+      justify-content: flex-end;
+      margin-top: 36px;
+      gap: 60px;
+    }
+
+    .sig-block {
+      text-align: center;
+      width: 160px;
+    }
+
+    .sig-line {
+      height: 1px;
+      background: #333;
+      margin-bottom: 5px;
+    }
+
+    .sig-label {
+      font-size: 10px;
+      color: #666;
+      letter-spacing: 0.5px;
+    }
+
+    /* ── PIE ── */
+    .footer {
+      margin-top: auto;
+      padding-top: 18px;
+      border-top: 1px solid #e0e0e0;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+    }
+
+    .footer-left {
+      font-family: 'Source Code Pro', monospace;
+      font-size: 9px;
+      color: #aaa;
+      letter-spacing: 1.5px;
+      line-height: 1.8;
+    }
+
+    .footer-right {
+      font-size: 10px;
+      color: #aaa;
+      text-align: right;
+    }
+
+    .bottom-band {
+      height: 6px;
+      background: #1a3a5c;
+      margin-top: 18px;
+    }
+
+    @media print {
+      body { background: white; padding: 0; }
+      .page { box-shadow: none; width: 100%; min-height: 100vh; }
+    }
+  </style>
+</head>
+<body>
+<div class="page">
+
+  <!-- BANDA SUPERIOR -->
+  <div class="top-band"></div>
+
+  <div class="inner">
+
+  <!-- ENCABEZADO -->
+  <div class="header">
+    <div class="logo-box">
+      <img src="LOGO.png" alt="Logo Universidad Blas Pascal" style="width:100%; height:100%; object-fit:contain;" />
+    </div>
+    <div class="inst-info">
+      <div class="inst-name">Universidad Blas Pascal</div>
+      <div class="inst-sub">
+        Licenciatura en Sistemas de Información
+      </div>
+    </div>
+  </div>
+
+  <!-- ESPACIO -->
+  <div style="flex:1; min-height: 30px;"></div>
+
+  <!-- TÍTULO CENTRAL -->
+  <div class="center-block">
+    <div class="subject-label">Trabajo Práctico &nbsp;·&nbsp; Ciclo Lectivo 2026</div>
+    <div class="main-title">Inglés <em>Técnico I</em></div>
+    <div class="work-title"><strong>Título:</strong> Evaluación Parcial Nº 1</div>
+    <div class="title-rule">
+      <div class="rule-line"></div>
+      <div class="rule-sq"></div>
+      <div class="rule-line"></div>
+    </div>
+  </div>
+
+  <!-- ESPACIO -->
+  <div style="flex:1; min-height: 30px;"></div>
+
+  <!-- TABLA DE DATOS -->
+  <div class="data-section">
+    <div class="data-section-title">Datos del alumno y la asignatura</div>
+    <table>
+      <tr>
+        <td class="label">Alumno / a</td>
+        <td class="colon">:</td>
+        <td class="value">Andrada Juan Pablo</td>
+      </tr>
+      <tr>
+        <td class="label">Docente</td>
+        <td class="colon">:</td>
+        <td class="value">Marchisio, Pablo</td>
+      </tr>
+      <tr>
+        <td class="label">Comisión</td>
+        <td class="colon">:</td>
+        <td class="value">Virtual</td>
+      </tr>
+      <tr>
+        <td class="label">Asignatura</td>
+        <td class="colon">:</td>
+        <td class="value">Inglés Técnico I</td>
+      </tr>
+      <tr>
+        <td class="label">Año / Cuatrimestre</td>
+        <td class="colon">:</td>
+        <td class="value">1º Año &nbsp;–&nbsp; Primer Cuatrimestre</td>
+      </tr>
+      <tr>
+        <td class="label">Fecha de entrega</td>
+        <td class="colon">:</td>
+        <td class="value">31/07/2026</td>
+      </tr>
+    </table>
+  </div>
+
+
+
+  <!-- PIE -->
+  <div class="footer">
+    <div class="footer-left">
+      INGLÉS TÉCNICO I
+    </div>
+    <div class="footer-right">
+      Trabajo Práctico<br>
+      Pág. 1 / 2
+    </div>
+  </div>
+
+  </div><!-- /inner página 1 -->
+
+  <!-- BANDA INFERIOR -->
+  <div class="bottom-band"></div>
+
+</div><!-- /page 1 -->
+
+<!-- ══════════════════════════════════════════ -->
+<!--  PÁGINA 2 – ACTIVIDAD 1                   -->
+<!-- ══════════════════════════════════════════ -->
+<div class="page">
+
+  <div class="top-band"></div>
+
+  <div class="inner">
+
+    <!-- ENCABEZADO PEQUEÑO -->
+    <div class="status-bar" style="margin-bottom:28px;">
+      <span style="font-family:'Source Sans 3',sans-serif; font-size:12px; color:#555; font-weight:600; text-transform:uppercase; letter-spacing:1px;">Inglés Técnico I &nbsp;·&nbsp; Universidad Blas Pascal</span>
+      <span style="font-family:'Source Code Pro',monospace; font-size:10px; color:#999; letter-spacing:2px;">2026</span>
+    </div>
+
+    <!-- ACTIVIDAD 1 -->
+    <div style="margin-bottom:10px;">
+      <span style="font-family:'Source Code Pro',monospace; font-size:10px; color:#1a3a5c; letter-spacing:3px; text-transform:uppercase; background:#eef4fb; padding:3px 10px; border-left:3px solid #1a3a5c;">Actividad 1</span>
+    </div>
+
+    <h2 style="font-family:'EB Garamond',serif; font-size:28px; font-weight:700; color:#1a3a5c; line-height:1.35; margin-bottom:24px; border-bottom:1.5px solid #1a3a5c; padding-bottom:14px;">
+      ¿Qué puedo hacer para mejorar mi...?
+    </h2>
+
+    <!-- Tabla 7 filas x 2 columnas -->
+    <table style="width:100%; border-collapse:collapse; margin-bottom:28px;">
+      <thead>
+        <tr>
+          <th style="border:1px solid #b0b8c8; padding:10px 14px; background:#eef4fb; font-family:'Source Sans 3',sans-serif; font-size:12px; font-weight:700; color:#1a3a5c; text-align:left; width:28%;">Habilidad</th>
+          <th style="border:1px solid #b0b8c8; padding:10px 14px; background:#eef4fb; font-family:'Source Sans 3',sans-serif; font-size:12px; font-weight:700; color:#1a3a5c; text-align:left;">¿Qué puedo hacer para mejorarla?</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="border:1px solid #b0b8c8; padding:14px 16px; font-family:'Source Sans 3',sans-serif; font-size:13px; font-weight:600; color:#1a3a5c; letter-spacing:0.5px; vertical-align:top;">LISTENING<br><span style="font-weight:400; font-size:11px; color:#666;">(Comprensión auditiva)</span></td>
+          <td style="border:1px solid #b0b8c8; padding:14px 16px; font-family:'Source Sans 3',sans-serif; font-size:13px; color:#333; vertical-align:top;">Escuchar canciones en inglés, ver películas y series con subtítulos en inglés, oír podcasts y mirar videos en YouTube para acostumbrarme a diferentes acentos.</td>
+        </tr>
+        <tr>
+          <td style="border:1px solid #b0b8c8; padding:14px 16px; font-family:'Source Sans 3',sans-serif; font-size:13px; font-weight:600; color:#1a3a5c; letter-spacing:0.5px; vertical-align:top;">SPEAKING<br><span style="font-weight:400; font-size:11px; color:#666;">(Expresión oral)</span></td>
+          <td style="border:1px solid #b0b8c8; padding:14px 16px; font-family:'Source Sans 3',sans-serif; font-size:13px; color:#333; vertical-align:top;">Practicar conversaciones en inglés todos los días, leer en voz alta, grabarme hablando y participar en intercambios de idiomas o clases de conversación.</td>
+        </tr>
+        <tr>
+          <td style="border:1px solid #b0b8c8; padding:14px 16px; font-family:'Source Sans 3',sans-serif; font-size:13px; font-weight:600; color:#1a3a5c; letter-spacing:0.5px; vertical-align:top;">READING<br><span style="font-weight:400; font-size:11px; color:#666;">(Lectura)</span></td>
+          <td style="border:1px solid #b0b8c8; padding:14px 16px; font-family:'Source Sans 3',sans-serif; font-size:13px; color:#333; vertical-align:top;">Leer cuentos, noticias, artículos y libros sencillos en inglés, subrayar palabras nuevas e intentar comprender el contexto sin traducir todo.</td>
+        </tr>
+        <tr>
+          <td style="border:1px solid #b0b8c8; padding:14px 16px; font-family:'Source Sans 3',sans-serif; font-size:13px; font-weight:600; color:#1a3a5c; letter-spacing:0.5px; vertical-align:top;">WRITING<br><span style="font-weight:400; font-size:11px; color:#666;">(Escritura)</span></td>
+          <td style="border:1px solid #b0b8c8; padding:14px 16px; font-family:'Source Sans 3',sans-serif; font-size:13px; color:#333; vertical-align:top;">Escribir pequeños textos, diarios personales, correos electrónicos o mensajes en inglés y pedir correcciones cuando sea posible.</td>
+        </tr>
+        <tr>
+          <td style="border:1px solid #b0b8c8; padding:14px 16px; font-family:'Source Sans 3',sans-serif; font-size:13px; font-weight:600; color:#1a3a5c; letter-spacing:0.5px; vertical-align:top;">GRAMMAR<br><span style="font-weight:400; font-size:11px; color:#666;">(Gramática)</span></td>
+          <td style="border:1px solid #b0b8c8; padding:14px 16px; font-family:'Source Sans 3',sans-serif; font-size:13px; color:#333; vertical-align:top;">Estudiar las reglas gramaticales, realizar ejercicios prácticos y repasar los tiempos verbales y las estructuras más utilizadas.</td>
+        </tr>
+        <tr>
+          <td style="border:1px solid #b0b8c8; padding:14px 16px; font-family:'Source Sans 3',sans-serif; font-size:13px; font-weight:600; color:#1a3a5c; letter-spacing:0.5px; vertical-align:top;">VOCABULARY<br><span style="font-weight:400; font-size:11px; color:#666;">(Vocabulario)</span></td>
+          <td style="border:1px solid #b0b8c8; padding:14px 16px; font-family:'Source Sans 3',sans-serif; font-size:13px; color:#333; vertical-align:top;">Aprender palabras nuevas cada día, usar tarjetas de memoria (flashcards), anotar expresiones útiles y practicar su uso en oraciones.</td>
+        </tr>
+        <tr>
+          <td style="border:1px solid #b0b8c8; padding:14px 16px; font-family:'Source Sans 3',sans-serif; font-size:13px; font-weight:600; color:#1a3a5c; letter-spacing:0.5px; vertical-align:top;">PRONUNCIATION<br><span style="font-weight:400; font-size:11px; color:#666;">(Pronunciación)</span></td>
+          <td style="border:1px solid #b0b8c8; padding:14px 16px; font-family:'Source Sans 3',sans-serif; font-size:13px; color:#333; vertical-align:top;">Escuchar hablantes nativos, imitar su forma de hablar, repetir palabras y frases en voz alta y practicar la entonación y el ritmo del idioma.</td>
+        </tr>
+      </tbody>
+    </table>
+
+
+    <!-- PIE -->
+    <div class="footer" style="margin-top:28px;">
+      <div class="footer-left">INGLÉS TÉCNICO I</div>
+      <div class="footer-right">Evaluación Parcial Nº 1<br>Pág. 2 / 2</div>
+    </div>
+
+  </div>
+
+  <div class="bottom-band"></div>
+
+</div>
+<!-- ══════════════════════════════════════════ -->
+<!--  PÁGINA 3 – ACTIVIDAD 2                   -->
+<!-- ══════════════════════════════════════════ -->
+<div class="page">
+
+  <div class="top-band"></div>
+
+  <div class="inner">
+
+    <!-- ENCABEZADO PEQUEÑO -->
+    <div style="display:flex; justify-content:space-between; align-items:center; border-bottom:1.5px solid #1a3a5c; padding-bottom:10px; margin-bottom:28px;">
+      <span style="font-family:'Source Sans 3',sans-serif; font-size:12px; color:#555; font-weight:600; text-transform:uppercase; letter-spacing:1px;">Inglés Técnico I &nbsp;·&nbsp; Universidad Blas Pascal</span>
+      <span style="font-family:'Source Code Pro',monospace; font-size:10px; color:#999; letter-spacing:2px;">2026</span>
+    </div>
+
+    <!-- ACTIVIDAD 2 -->
+    <div style="margin-bottom:10px;">
+      <span style="font-family:'Source Code Pro',monospace; font-size:10px; color:#1a3a5c; letter-spacing:3px; text-transform:uppercase; background:#eef4fb; padding:3px 10px; border-left:3px solid #1a3a5c;">Actividad 2</span>
+    </div>
+
+    <h2 style="font-family:'EB Garamond',serif; font-size:28px; font-weight:700; color:#1a3a5c; line-height:1.35; margin-bottom:32px; border-bottom:1.5px solid #1a3a5c; padding-bottom:14px;">
+      Un poco de humor
+    </h2>
+
+    <!-- TEXTO DE LECTURA -->
+    <div style="background:#fafafa; border:1px solid #d0d8e8; border-left:4px solid #1a3a5c; padding:18px 22px; margin-bottom:28px; font-family:'EB Garamond',serif;">
+      <p style="font-size:11px; font-family:'Source Code Pro',monospace; color:#1a3a5c; letter-spacing:2px; text-transform:uppercase; margin-bottom:12px;">Reading text</p>
+      <p style="font-size:15px; color:#222; line-height:1.8; text-align:justify;">Three mice were running around the house: Mother mouse and her two kids. Suddenly, a cat appeared and started running after them. They were really scared until Mother Mouse turned around and looking at the cat in the eyes, she started barking: <em>"bow wow!"</em> on top of her voice. The cat was terrified and ran away fast.</p>
+      <p style="font-size:15px; color:#222; line-height:1.8; text-align:justify; margin-top:12px;">"What was that mum?" One of the little mice asked.</p>
+      <p style="font-size:15px; color:#222; line-height:1.8; text-align:justify; margin-top:12px;">"That's why it's very important to learn a foreign language, my dear children!", the mother said.</p>
+    </div>
+
+    <!-- Contenido por completar -->
+    <div style="margin-bottom:24px;">
+      <p style="font-family:'Source Sans 3',sans-serif; font-size:13px; font-weight:700; color:#1a3a5c; margin-bottom:10px;">a) Pre-reading tasks</p>
+      <p style="font-family:'Source Sans 3',sans-serif; font-size:13px; color:#333; margin-bottom:18px;">1) Read the title and pay attention to the pictures. What do you think the story is about?<br>
+      <span style="font-size:12px; color:#666; font-style:italic;">(Lee el título y presta atención a las imágenes. ¿De qué te parece que se trata el texto?)</span></p>
+      <!-- líneas de respuesta con texto -->
+      <div style="margin-top:10px; position:relative; line-height:32px; background-image: repeating-linear-gradient(transparent, transparent 31px, #d0d0d0 31px, #d0d0d0 32px); padding-top:4px; min-height:64px;">
+        <p style="font-family:'Source Sans 3',sans-serif; font-size:13px; color:#333; margin:0; line-height:32px;">Creo que la historia trata sobre una familia de ratones que intenta escapar de un gato y utiliza la inteligencia y el conocimiento de otro idioma para salvarse.</p>
+      </div>
+    </div>
+
+    <!-- Pregunta 2 -->
+    <div style="margin-bottom:24px;">
+      <p style="font-family:'Source Sans 3',sans-serif; font-size:13px; color:#333; margin-bottom:14px;">2) Look for the following words in a dictionary.<br>
+      <span style="font-size:12px; color:#666; font-style:italic;">(Busca el significado de las siguientes palabras y escríbelo en español)</span></p>
+
+      <!-- Tabla de vocabulario -->
+      <table style="width:100%; border-collapse:collapse; margin-bottom:18px;">
+        <thead>
+          <tr>
+            <th style="border:1px solid #b0b8c8; padding:8px 12px; background:#eef4fb; font-family:'Source Sans 3',sans-serif; font-size:12px; font-weight:700; color:#1a3a5c; text-align:left; width:30%;">Palabra en inglés</th>
+            <th style="border:1px solid #b0b8c8; padding:8px 12px; background:#eef4fb; font-family:'Source Sans 3',sans-serif; font-size:12px; font-weight:700; color:#1a3a5c; text-align:left; width:35%;">Significado en español</th>
+            <th style="border:1px solid #b0b8c8; padding:8px 12px; background:#eef4fb; font-family:'Source Sans 3',sans-serif; font-size:12px; font-weight:700; color:#1a3a5c; text-align:left;">Categoría gramatical<br><span style="font-weight:400; font-size:10px; color:#666;">(sustantivo / verbo / preposición / adjetivo)</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td style="border:1px solid #b0b8c8; padding:8px 12px; font-family:'Source Sans 3',sans-serif; font-size:13px; color:#333;">Mice</td><td style="border:1px solid #b0b8c8; padding:8px 12px; font-family:'Source Sans 3',sans-serif; font-size:13px; color:#333;">Ratones</td><td style="border:1px solid #b0b8c8; padding:8px 12px; font-family:'Source Sans 3',sans-serif; font-size:13px; color:#333;">Sustantivo (plural de mouse)</td></tr>
+          <tr><td style="border:1px solid #b0b8c8; padding:8px 12px; font-family:'Source Sans 3',sans-serif; font-size:13px; color:#333;">Scared</td><td style="border:1px solid #b0b8c8; padding:8px 12px; font-family:'Source Sans 3',sans-serif; font-size:13px; color:#333;">Asustado(s)</td><td style="border:1px solid #b0b8c8; padding:8px 12px; font-family:'Source Sans 3',sans-serif; font-size:13px; color:#333;">Adjetivo</td></tr>
+          <tr><td style="border:1px solid #b0b8c8; padding:8px 12px; font-family:'Source Sans 3',sans-serif; font-size:13px; color:#333;">Run</td><td style="border:1px solid #b0b8c8; padding:8px 12px; font-family:'Source Sans 3',sans-serif; font-size:13px; color:#333;">Correr</td><td style="border:1px solid #b0b8c8; padding:8px 12px; font-family:'Source Sans 3',sans-serif; font-size:13px; color:#333;">Verbo</td></tr>
+          <tr><td style="border:1px solid #b0b8c8; padding:8px 12px; font-family:'Source Sans 3',sans-serif; font-size:13px; color:#333;">Turn around</td><td style="border:1px solid #b0b8c8; padding:8px 12px; font-family:'Source Sans 3',sans-serif; font-size:13px; color:#333;">Dar la vuelta / Girarse</td><td style="border:1px solid #b0b8c8; padding:8px 12px; font-family:'Source Sans 3',sans-serif; font-size:13px; color:#333;">Verbo</td></tr>
+          <tr><td style="border:1px solid #b0b8c8; padding:8px 12px; font-family:'Source Sans 3',sans-serif; font-size:13px; color:#333;">Mother</td><td style="border:1px solid #b0b8c8; padding:8px 12px; font-family:'Source Sans 3',sans-serif; font-size:13px; color:#333;">Madre</td><td style="border:1px solid #b0b8c8; padding:8px 12px; font-family:'Source Sans 3',sans-serif; font-size:13px; color:#333;">Sustantivo</td></tr>
+          <tr><td style="border:1px solid #b0b8c8; padding:8px 12px; font-family:'Source Sans 3',sans-serif; font-size:13px; color:#333;">Foreign</td><td style="border:1px solid #b0b8c8; padding:8px 12px; font-family:'Source Sans 3',sans-serif; font-size:13px; color:#333;">Extranjero</td><td style="border:1px solid #b0b8c8; padding:8px 12px; font-family:'Source Sans 3',sans-serif; font-size:13px; color:#333;">Adjetivo</td></tr>
+          <tr><td style="border:1px solid #b0b8c8; padding:8px 12px; font-family:'Source Sans 3',sans-serif; font-size:13px; color:#333;">Bow wow</td><td style="border:1px solid #b0b8c8; padding:8px 12px; font-family:'Source Sans 3',sans-serif; font-size:13px; color:#333;">Guau guau</td><td style="border:1px solid #b0b8c8; padding:8px 12px; font-family:'Source Sans 3',sans-serif; font-size:13px; color:#333;">Onomatopeya (sonido de un perro)</td></tr>
+          <tr><td style="border:1px solid #b0b8c8; padding:8px 12px; font-family:'Source Sans 3',sans-serif; font-size:13px; color:#333;">In</td><td style="border:1px solid #b0b8c8; padding:8px 12px; font-family:'Source Sans 3',sans-serif; font-size:13px; color:#333;">En / Dentro de</td><td style="border:1px solid #b0b8c8; padding:8px 12px; font-family:'Source Sans 3',sans-serif; font-size:13px; color:#333;">Preposición</td></tr>
+        </tbody>
+      </table>
+
+      <div style="background:#f8f9fa; border-left:3px solid #1a3a5c; padding:12px 16px; margin-bottom:18px;">
+        <p style="font-family:'Source Sans 3',sans-serif; font-size:13px; color:#1a3a5c; font-weight:600; margin-bottom:8px;">Clasificación:</p>
+        <p style="font-family:'Source Sans 3',sans-serif; font-size:13px; color:#333; margin:0;">• <strong>Sustantivos:</strong> mice, mother<br>
+        • <strong>Verbos:</strong> run, turn around<br>
+        • <strong>Preposición:</strong> in<br>
+        • <strong>Adjetivos:</strong> scared, foreign</p>
+      </div>
+
+      <p style="font-family:'Source Sans 3',sans-serif; font-size:13px; color:#333; margin-bottom:10px;"><strong>¿Cómo reconocerlas?</strong></p>
+      <ul style="font-family:'Source Sans 3',sans-serif; font-size:13px; color:#333; line-height:1.8; margin:0 0 20px 20px; padding:0;">
+        <li>Los sustantivos nombran personas, animales o cosas.</li>
+        <li>Los verbos expresan acciones.</li>
+        <li>Los adjetivos describen características o estados.</li>
+        <li>Las preposiciones indican lugar, tiempo o relación entre palabras.</li>
+      </ul>
+
+      <p style="font-family:'Source Sans 3',sans-serif; font-size:13px; color:#333; margin-bottom:14px;"><strong>¿Cómo podemos reconocer la función o categorías gramaticales de estas palabras?</strong></p>
+      <div style="margin-top:10px; position:relative; line-height:32px; background-image: repeating-linear-gradient(transparent, transparent 31px, #d0d0d0 31px, #d0d0d0 32px); padding-top:4px; min-height:96px;">
+        <p style="font-family:'Source Sans 3',sans-serif; font-size:13px; color:#333; margin:0; line-height:32px;">Podemos reconocerlas observando su función en la oración: los sustantivos son los sujetos u objetos, los verbos indican lo que hace el sujeto, los adjetivos acompañan a los sustantivos y las preposiciones conectan palabras mostrando relaciones espaciales o temporales.</p>
+      </div>
+
+    </div>
+
+    <!-- SECCIÓN B -->
+    <div style="margin-bottom:8px;">
+      <p style="font-family:'Source Sans 3',sans-serif; font-size:13px; font-weight:700; color:#1a3a5c; margin-bottom:16px;">b) While reading activities</p>
+
+      <!-- Pregunta 3 -->
+      <p style="font-family:'Source Sans 3',sans-serif; font-size:13px; color:#333; margin-bottom:10px;">3) Read the text and underline the words you don't know. Find out about the meaning of these words.<br>
+      <span style="font-size:12px; color:#666; font-style:italic;">(Lee el texto y subraya las palabras que no conozcas. Averigua el significado de estas palabras)</span></p>
+      
+      <div style="background:#f8f9fa; border-left:3px solid #1a3a5c; padding:12px 16px; margin-bottom:20px;">
+        <p style="font-family:'Source Sans 3',sans-serif; font-size:13px; color:#1a3a5c; font-weight:600; margin-bottom:8px;">Palabras desconocidas y significado:</p>
+        <p style="font-family:'Source Sans 3',sans-serif; font-size:13px; color:#333; margin:0; line-height:1.8;">
+          • <strong>Appeared:</strong> apareció<br>
+          • <strong>Started:</strong> comenzó<br>
+          • <strong>Terrified:</strong> aterrorizado<br>
+          • <strong>Ran away:</strong> huyó / salió corriendo<br>
+          • <strong>Asked:</strong> preguntó<br>
+          • <strong>Learn:</strong> aprender<br>
+          • <strong>Dear:</strong> querido/a<br>
+          • <strong>Children:</strong> niños / hijos
+        </p>
+      </div>
+
+      <!-- Pregunta 4 -->
+      <p style="font-family:'Source Sans 3',sans-serif; font-size:13px; color:#333; margin-bottom:10px;">4) Can you retell the joke in your own words (in Spanish if you want)?<br>
+      <span style="font-size:12px; color:#666; font-style:italic;">(¿Puedes contar el chiste en tus propias palabras?)</span></p>
+      <div style="margin-top:10px; position:relative; line-height:32px; background-image: repeating-linear-gradient(transparent, transparent 31px, #d0d0d0 31px, #d0d0d0 32px); padding-top:4px; min-height:128px; margin-bottom:20px;">
+        <p style="font-family:'Source Sans 3',sans-serif; font-size:13px; color:#333; margin:0; line-height:32px;">Una mamá ratón y sus dos hijos estaban siendo perseguidos por un gato. Para ahuyentarlo, la mamá empezó a ladrar como un perro. El gato creyó que había un perro cerca y escapó. Luego la mamá les explicó a sus hijos que aprender un idioma extranjero puede ser muy útil.</p>
+      </div>
+
+      <!-- Pregunta 5 -->
+      <p style="font-family:'Source Sans 3',sans-serif; font-size:13px; color:#333; margin-bottom:10px;">5) What is the message of the story?<br>
+      <span style="font-size:12px; color:#666; font-style:italic;">(¿Cuál es el mensaje del relato?)</span></p>
+      <div style="margin-top:10px; position:relative; line-height:32px; background-image: repeating-linear-gradient(transparent, transparent 31px, #d0d0d0 31px, #d0d0d0 32px); padding-top:4px; min-height:64px; margin-bottom:20px;">
+        <p style="font-family:'Source Sans 3',sans-serif; font-size:13px; color:#333; margin:0; line-height:32px;">El mensaje es que aprender idiomas extranjeros puede ser muy útil y ayudarnos en diferentes situaciones de la vida.</p>
+      </div>
+
+      <!-- Pregunta 6 -->
+      <p style="font-family:'Source Sans 3',sans-serif; font-size:13px; color:#333; margin-bottom:10px;">6) Can you find the following items in the text?<br>
+      <span style="font-size:12px; color:#666; font-style:italic;">(Encuentra los siguientes ítems en el texto)</span></p>
+      <table style="width:100%; border-collapse:collapse; margin-bottom:20px;">
+        <thead>
+          <tr>
+            <th style="border:1px solid #b0b8c8; padding:8px 12px; background:#eef4fb; font-family:'Source Sans 3',sans-serif; font-size:12px; font-weight:700; color:#1a3a5c; text-align:left; width:45%;">Ítem</th>
+            <th style="border:1px solid #b0b8c8; padding:8px 12px; background:#eef4fb; font-family:'Source Sans 3',sans-serif; font-size:12px; font-weight:700; color:#1a3a5c; text-align:left;">Respuesta</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td style="border:1px solid #b0b8c8; padding:8px 12px; font-size:13px; color:#333; font-family:'Source Sans 3',sans-serif;">The names of two animals</td><td style="border:1px solid #b0b8c8; padding:8px 12px; font-family:'Source Sans 3',sans-serif; font-size:13px; color:#333;">mouse (mice), cat</td></tr>
+          <tr><td style="border:1px solid #b0b8c8; padding:8px 12px; font-size:13px; color:#333; font-family:'Source Sans 3',sans-serif;">Words associated with family</td><td style="border:1px solid #b0b8c8; padding:8px 12px; font-family:'Source Sans 3',sans-serif; font-size:13px; color:#333;">mother, kids, children, mum</td></tr>
+          <tr><td style="border:1px solid #b0b8c8; padding:8px 12px; font-size:13px; color:#333; font-family:'Source Sans 3',sans-serif;">An irregular plural</td><td style="border:1px solid #b0b8c8; padding:8px 12px; font-family:'Source Sans 3',sans-serif; font-size:13px; color:#333;">mice</td></tr>
+          <tr><td style="border:1px solid #b0b8c8; padding:8px 12px; font-size:13px; color:#333; font-family:'Source Sans 3',sans-serif;">An irregular verb in the simple past</td><td style="border:1px solid #b0b8c8; padding:8px 12px; font-family:'Source Sans 3',sans-serif; font-size:13px; color:#333;">were, ran, turned (cualquiera)</td></tr>
+          <tr><td style="border:1px solid #b0b8c8; padding:8px 12px; font-size:13px; color:#333; font-family:'Source Sans 3',sans-serif;">A regular verb in the simple past</td><td style="border:1px solid #b0b8c8; padding:8px 12px; font-family:'Source Sans 3',sans-serif; font-size:13px; color:#333;">started, asked, appeared</td></tr>
+          <tr><td style="border:1px solid #b0b8c8; padding:8px 12px; font-size:13px; color:#333; font-family:'Source Sans 3',sans-serif;">A feeling or emotion</td><td style="border:1px solid #b0b8c8; padding:8px 12px; font-family:'Source Sans 3',sans-serif; font-size:13px; color:#333;">scared, terrified</td></tr>
+          <tr><td style="border:1px solid #b0b8c8; padding:8px 12px; font-size:13px; color:#333; font-family:'Source Sans 3',sans-serif;">A place</td><td style="border:1px solid #b0b8c8; padding:8px 12px; font-family:'Source Sans 3',sans-serif; font-size:13px; color:#333;">the house</td></tr>
+        </tbody>
+      </table>
+
+      <!-- Pregunta 7 -->
+      <p style="font-family:'Source Sans 3',sans-serif; font-size:13px; color:#333; margin-bottom:10px;">7) True or false. Correct the false statements.<br>
+      <span style="font-size:12px; color:#666; font-style:italic;">(Verdadero o falso. Corregir las oraciones incorrectas)</span></p>
+      <table style="width:100%; border-collapse:collapse; margin-bottom:20px;">
+        <thead>
+          <tr>
+            <th style="border:1px solid #b0b8c8; padding:8px 12px; background:#eef4fb; font-family:'Source Sans 3',sans-serif; font-size:12px; font-weight:700; color:#1a3a5c; text-align:left; width:55%;">Oración</th>
+            <th style="border:1px solid #b0b8c8; padding:8px 12px; background:#eef4fb; font-family:'Source Sans 3',sans-serif; font-size:12px; font-weight:700; color:#1a3a5c; text-align:center; width:15%;">V / F</th>
+            <th style="border:1px solid #b0b8c8; padding:8px 12px; background:#eef4fb; font-family:'Source Sans 3',sans-serif; font-size:12px; font-weight:700; color:#1a3a5c; text-align:left;">Corrección</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td style="border:1px solid #b0b8c8; padding:8px 12px; font-size:12px; color:#333; font-family:'Source Sans 3',sans-serif;">This story is about a dog that wants to attack a cat and its babies.</td>
+            <td style="border:1px solid #b0b8c8; padding:8px 12px; text-align:center; font-family:'Source Sans 3',sans-serif; font-size:13px; font-weight:700; color:#c92a2a;">F</td>
+            <td style="border:1px solid #b0b8c8; padding:8px 12px; font-family:'Source Sans 3',sans-serif; font-size:12px; color:#333;">La historia trata sobre una familia de ratones perseguida por un gato.</td>
+          </tr>
+          <tr>
+            <td style="border:1px solid #b0b8c8; padding:8px 12px; font-size:12px; color:#333; font-family:'Source Sans 3',sans-serif;">The baby mice were really happy when they saw the cat.</td>
+            <td style="border:1px solid #b0b8c8; padding:8px 12px; text-align:center; font-family:'Source Sans 3',sans-serif; font-size:13px; font-weight:700; color:#c92a2a;">F</td>
+            <td style="border:1px solid #b0b8c8; padding:8px 12px; font-family:'Source Sans 3',sans-serif; font-size:12px; color:#333;">Los pequeños ratones estaban muy asustados cuando vieron al gato.</td>
+          </tr>
+          <tr>
+            <td style="border:1px solid #b0b8c8; padding:8px 12px; font-size:12px; color:#333; font-family:'Source Sans 3',sans-serif;">The mother uses the language of dogs to scare the cat away.</td>
+            <td style="border:1px solid #b0b8c8; padding:8px 12px; text-align:center; font-family:'Source Sans 3',sans-serif; font-size:13px; font-weight:700; color:#2b8a3e;">V</td>
+            <td style="border:1px solid #b0b8c8; padding:8px 12px; font-family:'Source Sans 3',sans-serif; font-size:12px; color:#999;">—</td>
+          </tr>
+          <tr>
+            <td style="border:1px solid #b0b8c8; padding:8px 12px; font-size:12px; color:#333; font-family:'Source Sans 3',sans-serif;">Mother mouse uses this experience to teach her children a lesson.</td>
+            <td style="border:1px solid #b0b8c8; padding:8px 12px; text-align:center; font-family:'Source Sans 3',sans-serif; font-size:13px; font-weight:700; color:#2b8a3e;">V</td>
+            <td style="border:1px solid #b0b8c8; padding:8px 12px; font-family:'Source Sans 3',sans-serif; font-size:12px; color:#999;">—</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <!-- Pregunta 8 - After reading -->
+      <p style="font-family:'Source Sans 3',sans-serif; font-size:13px; font-weight:700; color:#1a3a5c; margin-bottom:8px;">After reading activity</p>
+      <p style="font-family:'Source Sans 3',sans-serif; font-size:13px; color:#333; margin-bottom:10px;">8) Now it is time to use your imagination. Create a comic strip telling the story you have just read. You can use a digital tool to do it. Add this activity to your portfolio.</p>
+      
+      <!-- Placeholder para imagen del comic -->
+      <div style="border:2px dashed #b0b8c8; padding:20px; text-align:center; background:#fafafa; margin-bottom:10px;">
+        <img src="COMIC.png" alt="Comic strip" style="max-width:100%; height:auto;" />
+      </div>
+    </div>
+
+    <!-- PIE -->
+    <div class="footer" style="margin-top:auto;">
+      <div class="footer-left">INGLÉS TÉCNICO I</div>
+      <div class="footer-right">Evaluación Parcial Nº 1<br>Pág. 3 / 3</div>
+    </div>
+
+  </div>
+
+  <div class="bottom-band"></div>
+
+</div>
+<!-- ══════════════════════════════════════════ -->
+<!--  PÁGINA 4 – ACTIVIDAD 4                   -->
+<!-- ══════════════════════════════════════════ -->
+<div class="page">
+
+  <div class="top-band"></div>
+
+  <div class="inner">
+
+    <!-- ENCABEZADO PEQUEÑO -->
+    <div style="display:flex; justify-content:space-between; align-items:center; border-bottom:1.5px solid #1a3a5c; padding-bottom:10px; margin-bottom:28px;">
+      <span style="font-family:'Source Sans 3',sans-serif; font-size:12px; color:#555; font-weight:600; text-transform:uppercase; letter-spacing:1px;">Inglés Técnico I &nbsp;·&nbsp; Universidad Blas Pascal</span>
+      <span style="font-family:'Source Code Pro',monospace; font-size:10px; color:#999; letter-spacing:2px;">2026</span>
+    </div>
+
+    <!-- ACTIVIDAD 4 -->
+    <div style="margin-bottom:10px;">
+      <span style="font-family:'Source Code Pro',monospace; font-size:10px; color:#1a3a5c; letter-spacing:3px; text-transform:uppercase; background:#eef4fb; padding:3px 10px; border-left:3px solid #1a3a5c;">Actividad 4</span>
+    </div>
+
+    <h2 style="font-family:'EB Garamond',serif; font-size:28px; font-weight:700; color:#1a3a5c; line-height:1.35; margin-bottom:32px; border-bottom:1.5px solid #1a3a5c; padding-bottom:14px;">
+      Lectura comprensiva
+    </h2>
+
+    <!-- Contenido por completar -->
+    
+    <!-- Pregunta 1 -->
+    <div style="margin-bottom:20px;">
+      <p style="font-family:'Source Sans 3',sans-serif; font-size:13px; color:#333; font-weight:600; margin-bottom:10px;">1. ¿Cómo le resultó la lectura de este texto de nivel básico?</p>
+      <div style="margin-top:10px; position:relative; line-height:32px; background-image: repeating-linear-gradient(transparent, transparent 31px, #d0d0d0 31px, #d0d0d0 32px); padding-top:4px; min-height:64px;">
+        <p style="font-family:'Source Sans 3',sans-serif; font-size:13px; color:#333; margin:0; line-height:32px;">La lectura me resultó bastante sencilla de comprender. Al tratarse de mensajes cortos y usar vocabulario cotidiano, pude seguir la idea principal sin muchas dificultades.</p>
+      </div>
+    </div>
+
+    <!-- Pregunta 2 -->
+    <div style="margin-bottom:20px;">
+      <p style="font-family:'Source Sans 3',sans-serif; font-size:13px; color:#333; font-weight:600; margin-bottom:10px;">2. ¿Tuvo alguna dificultad con las distintas actividades?</p>
+      <div style="margin-top:10px; position:relative; line-height:32px; background-image: repeating-linear-gradient(transparent, transparent 31px, #d0d0d0 31px, #d0d0d0 32px); padding-top:4px; min-height:64px;">
+        <p style="font-family:'Source Sans 3',sans-serif; font-size:13px; color:#333; margin:0; line-height:32px;">Tuve algunas dudas con ciertas expresiones y tiempos verbales, pero el contexto de la conversación me ayudó a entender su significado.</p>
+      </div>
+    </div>
+
+    <!-- Pregunta 3 -->
+    <div style="margin-bottom:20px;">
+      <p style="font-family:'Source Sans 3',sans-serif; font-size:13px; color:#333; font-weight:600; margin-bottom:10px;">3. ¿Encontró nuevas palabras que no conocía?</p>
+      <div style="margin-top:10px; position:relative; line-height:32px; background-image: repeating-linear-gradient(transparent, transparent 31px, #d0d0d0 31px, #d0d0d0 32px); padding-top:4px; min-height:64px;">
+        <p style="font-family:'Source Sans 3',sans-serif; font-size:13px; color:#333; margin:0; line-height:32px;">Sí, encontré algunas palabras y expresiones nuevas, aunque la mayoría eran fáciles de deducir por el contexto.</p>
+      </div>
+    </div>
+
+    <!-- Pregunta 4 -->
+    <div style="margin-bottom:24px;">
+      <p style="font-family:'Source Sans 3',sans-serif; font-size:13px; color:#333; font-weight:600; margin-bottom:10px;">4. ¿Qué recurso o estrategia utilizó para su comprensión?</p>
+      <div style="margin-top:10px; position:relative; line-height:32px; background-image: repeating-linear-gradient(transparent, transparent 31px, #d0d0d0 31px, #d0d0d0 32px); padding-top:4px; min-height:96px;">
+        <p style="font-family:'Source Sans 3',sans-serif; font-size:13px; color:#333; margin:0; line-height:32px;">Utilicé un diccionario en línea y también intenté inferir el significado de las palabras desconocidas a partir del contexto de la oración. Además, releí el texto varias veces para comprenderlo mejor.</p>
+      </div>
+    </div>
+
+    <!-- Categorías gramaticales -->
+    <h3 style="font-family:'Source Sans 3',sans-serif; font-size:16px; font-weight:700; color:#1a3a5c; margin-bottom:16px; margin-top:28px;">Categoría gramatical de las palabras</h3>
+
+    <!-- Oración 1 -->
+    <p style="font-family:'Source Sans 3',sans-serif; font-size:13px; color:#333; font-weight:600; margin-bottom:10px;">1. The Blue Café is nice.</p>
+    <table style="width:100%; border-collapse:collapse; margin-bottom:20px;">
+      <thead>
+        <tr>
+          <th style="border:1px solid #b0b8c8; padding:8px 12px; background:#eef4fb; font-family:'Source Sans 3',sans-serif; font-size:12px; font-weight:700; color:#1a3a5c; text-align:left; width:40%;">Palabra</th>
+          <th style="border:1px solid #b0b8c8; padding:8px 12px; background:#eef4fb; font-family:'Source Sans 3',sans-serif; font-size:12px; font-weight:700; color:#1a3a5c; text-align:left;">Categoría gramatical</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td style="border:1px solid #b0b8c8; padding:8px 12px; font-family:'Source Sans 3',sans-serif; font-size:13px; color:#333;">The</td><td style="border:1px solid #b0b8c8; padding:8px 12px; font-family:'Source Sans 3',sans-serif; font-size:13px; color:#333;">Article (artículo)</td></tr>
+        <tr><td style="border:1px solid #b0b8c8; padding:8px 12px; font-family:'Source Sans 3',sans-serif; font-size:13px; color:#333;">Blue</td><td style="border:1px solid #b0b8c8; padding:8px 12px; font-family:'Source Sans 3',sans-serif; font-size:13px; color:#333;">Adjective (adjetivo)</td></tr>
+        <tr><td style="border:1px solid #b0b8c8; padding:8px 12px; font-family:'Source Sans 3',sans-serif; font-size:13px; color:#333;">Café</td><td style="border:1px solid #b0b8c8; padding:8px 12px; font-family:'Source Sans 3',sans-serif; font-size:13px; color:#333;">Noun (sustantivo)</td></tr>
+        <tr><td style="border:1px solid #b0b8c8; padding:8px 12px; font-family:'Source Sans 3',sans-serif; font-size:13px; color:#333;">is</td><td style="border:1px solid #b0b8c8; padding:8px 12px; font-family:'Source Sans 3',sans-serif; font-size:13px; color:#333;">Verb (verbo)</td></tr>
+        <tr><td style="border:1px solid #b0b8c8; padding:8px 12px; font-family:'Source Sans 3',sans-serif; font-size:13px; color:#333;">nice</td><td style="border:1px solid #b0b8c8; padding:8px 12px; font-family:'Source Sans 3',sans-serif; font-size:13px; color:#333;">Adjective (adjetivo)</td></tr>
+      </tbody>
+    </table>
+
+    <!-- Oración 2 -->
+    <p style="font-family:'Source Sans 3',sans-serif; font-size:13px; color:#333; font-weight:600; margin-bottom:10px;">2. I love the tea there.</p>
+    <table style="width:100%; border-collapse:collapse; margin-bottom:20px;">
+      <thead>
+        <tr>
+          <th style="border:1px solid #b0b8c8; padding:8px 12px; background:#eef4fb; font-family:'Source Sans 3',sans-serif; font-size:12px; font-weight:700; color:#1a3a5c; text-align:left; width:40%;">Palabra</th>
+          <th style="border:1px solid #b0b8c8; padding:8px 12px; background:#eef4fb; font-family:'Source Sans 3',sans-serif; font-size:12px; font-weight:700; color:#1a3a5c; text-align:left;">Categoría gramatical</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td style="border:1px solid #b0b8c8; padding:8px 12px; font-family:'Source Sans 3',sans-serif; font-size:13px; color:#333;">I</td><td style="border:1px solid #b0b8c8; padding:8px 12px; font-family:'Source Sans 3',sans-serif; font-size:13px; color:#333;">Pronoun (pronombre)</td></tr>
+        <tr><td style="border:1px solid #b0b8c8; padding:8px 12px; font-family:'Source Sans 3',sans-serif; font-size:13px; color:#333;">love</td><td style="border:1px solid #b0b8c8; padding:8px 12px; font-family:'Source Sans 3',sans-serif; font-size:13px; color:#333;">Verb (verbo)</td></tr>
+        <tr><td style="border:1px solid #b0b8c8; padding:8px 12px; font-family:'Source Sans 3',sans-serif; font-size:13px; color:#333;">the</td><td style="border:1px solid #b0b8c8; padding:8px 12px; font-family:'Source Sans 3',sans-serif; font-size:13px; color:#333;">Article (artículo)</td></tr>
+        <tr><td style="border:1px solid #b0b8c8; padding:8px 12px; font-family:'Source Sans 3',sans-serif; font-size:13px; color:#333;">tea</td><td style="border:1px solid #b0b8c8; padding:8px 12px; font-family:'Source Sans 3',sans-serif; font-size:13px; color:#333;">Noun (sustantivo)</td></tr>
+        <tr><td style="border:1px solid #b0b8c8; padding:8px 12px; font-family:'Source Sans 3',sans-serif; font-size:13px; color:#333;">there</td><td style="border:1px solid #b0b8c8; padding:8px 12px; font-family:'Source Sans 3',sans-serif; font-size:13px; color:#333;">Adverb (adverbio)</td></tr>
+      </tbody>
+    </table>
+
+    <!-- Oración 3 -->
+    <p style="font-family:'Source Sans 3',sans-serif; font-size:13px; color:#333; font-weight:600; margin-bottom:10px;">3. I'm working now, but I finish work at five.</p>
+    <table style="width:100%; border-collapse:collapse; margin-bottom:20px;">
+      <thead>
+        <tr>
+          <th style="border:1px solid #b0b8c8; padding:8px 12px; background:#eef4fb; font-family:'Source Sans 3',sans-serif; font-size:12px; font-weight:700; color:#1a3a5c; text-align:left; width:40%;">Palabra</th>
+          <th style="border:1px solid #b0b8c8; padding:8px 12px; background:#eef4fb; font-family:'Source Sans 3',sans-serif; font-size:12px; font-weight:700; color:#1a3a5c; text-align:left;">Categoría gramatical</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td style="border:1px solid #b0b8c8; padding:8px 12px; font-family:'Source Sans 3',sans-serif; font-size:13px; color:#333;">I</td><td style="border:1px solid #b0b8c8; padding:8px 12px; font-family:'Source Sans 3',sans-serif; font-size:13px; color:#333;">Pronoun (pronombre)</td></tr>
+        <tr><td style="border:1px solid #b0b8c8; padding:8px 12px; font-family:'Source Sans 3',sans-serif; font-size:13px; color:#333;">am</td><td style="border:1px solid #b0b8c8; padding:8px 12px; font-family:'Source Sans 3',sans-serif; font-size:13px; color:#333;">Verb (verbo auxiliar)</td></tr>
+        <tr><td style="border:1px solid #b0b8c8; padding:8px 12px; font-family:'Source Sans 3',sans-serif; font-size:13px; color:#333;">working</td><td style="border:1px solid #b0b8c8; padding:8px 12px; font-family:'Source Sans 3',sans-serif; font-size:13px; color:#333;">Verb (verbo principal)</td></tr>
+        <tr><td style="border:1px solid #b0b8c8; padding:8px 12px; font-family:'Source Sans 3',sans-serif; font-size:13px; color:#333;">now</td><td style="border:1px solid #b0b8c8; padding:8px 12px; font-family:'Source Sans 3',sans-serif; font-size:13px; color:#333;">Adverb (adverbio)</td></tr>
+        <tr><td style="border:1px solid #b0b8c8; padding:8px 12px; font-family:'Source Sans 3',sans-serif; font-size:13px; color:#333;">but</td><td style="border:1px solid #b0b8c8; padding:8px 12px; font-family:'Source Sans 3',sans-serif; font-size:13px; color:#333;">Conjunction (conjunción)</td></tr>
+        <tr><td style="border:1px solid #b0b8c8; padding:8px 12px; font-family:'Source Sans 3',sans-serif; font-size:13px; color:#333;">I</td><td style="border:1px solid #b0b8c8; padding:8px 12px; font-family:'Source Sans 3',sans-serif; font-size:13px; color:#333;">Pronoun (pronombre)</td></tr>
+        <tr><td style="border:1px solid #b0b8c8; padding:8px 12px; font-family:'Source Sans 3',sans-serif; font-size:13px; color:#333;">finish</td><td style="border:1px solid #b0b8c8; padding:8px 12px; font-family:'Source Sans 3',sans-serif; font-size:13px; color:#333;">Verb (verbo)</td></tr>
+        <tr><td style="border:1px solid #b0b8c8; padding:8px 12px; font-family:'Source Sans 3',sans-serif; font-size:13px; color:#333;">work</td><td style="border:1px solid #b0b8c8; padding:8px 12px; font-family:'Source Sans 3',sans-serif; font-size:13px; color:#333;">Noun (sustantivo)</td></tr>
+        <tr><td style="border:1px solid #b0b8c8; padding:8px 12px; font-family:'Source Sans 3',sans-serif; font-size:13px; color:#333;">at</td><td style="border:1px solid #b0b8c8; padding:8px 12px; font-family:'Source Sans 3',sans-serif; font-size:13px; color:#333;">Preposition (preposición)</td></tr>
+        <tr><td style="border:1px solid #b0b8c8; padding:8px 12px; font-family:'Source Sans 3',sans-serif; font-size:13px; color:#333;">five</td><td style="border:1px solid #b0b8c8; padding:8px 12px; font-family:'Source Sans 3',sans-serif; font-size:13px; color:#333;">Numeral (número)</td></tr>
+      </tbody>
+    </table>
+
+    <!-- PIE -->
+    <div class="footer" style="margin-top:auto;">
+      <div class="footer-left">INGLÉS TÉCNICO I</div>
+      <div class="footer-right">Evaluación Parcial Nº 1<br>Pág. 4 / 4</div>
+    </div>
+
+  </div>
+
+  <div class="bottom-band"></div>
+
+</div>
+<!-- ══════════════════════════════════════════ -->
+<!--  PÁGINA 5 – ACTIVIDAD 5                   -->
+<!-- ══════════════════════════════════════════ -->
+<div class="page">
+
+  <div class="top-band"></div>
+
+  <div class="inner">
+
+    <!-- ENCABEZADO PEQUEÑO -->
+    <div style="display:flex; justify-content:space-between; align-items:center; border-bottom:1.5px solid #1a3a5c; padding-bottom:10px; margin-bottom:28px;">
+      <span style="font-family:'Source Sans 3',sans-serif; font-size:12px; color:#555; font-weight:600; text-transform:uppercase; letter-spacing:1px;">Inglés Técnico I &nbsp;·&nbsp; Universidad Blas Pascal</span>
+      <span style="font-family:'Source Code Pro',monospace; font-size:10px; color:#999; letter-spacing:2px;">2026</span>
+    </div>
+
+    <!-- ACTIVIDAD 5 -->
+    <div style="margin-bottom:10px;">
+      <span style="font-family:'Source Code Pro',monospace; font-size:10px; color:#1a3a5c; letter-spacing:3px; text-transform:uppercase; background:#eef4fb; padding:3px 10px; border-left:3px solid #1a3a5c;">Actividad 5</span>
+    </div>
+
+    <h2 style="font-family:'EB Garamond',serif; font-size:28px; font-weight:700; color:#1a3a5c; line-height:1.35; margin-bottom:32px; border-bottom:1.5px solid #1a3a5c; padding-bottom:14px;">
+      Con una canción
+    </h2>
+
+    <!-- Contenido por completar -->
+    
+    <p style="font-family:'Source Sans 3',sans-serif; font-size:13px; color:#333; margin-bottom:18px; line-height:1.6;">La siguiente canción refleja las distintas acciones realizadas por <strong>Mr. Morton</strong>. Los invitamos a escribir al menos cinco oraciones donde <strong>Mr. Morton</strong> es el sujeto.</p>
+
+    <!-- 5 oraciones en blanco -->
+    <div style="margin-bottom:24px;">
+      <p style="font-family:'Source Sans 3',sans-serif; font-size:13px; color:#1a3a5c; font-weight:600; margin-bottom:14px;">Oraciones:</p>
+      
+      <div style="margin-bottom:10px;">
+        <span style="font-family:'Source Sans 3',sans-serif; font-size:13px; color:#666; font-weight:600;">1.</span>
+        <div style="margin-top:4px; position:relative; line-height:28px; background-image: repeating-linear-gradient(transparent, transparent 27px, #d0d0d0 27px, #d0d0d0 28px); padding-top:2px; min-height:28px;">
+          <p style="font-family:'Source Sans 3',sans-serif; font-size:13px; color:#333; margin:0; line-height:28px;">Mr. Morton walked down the street.</p>
+        </div>
+      </div>
+
+      <div style="margin-bottom:10px;">
+        <span style="font-family:'Source Sans 3',sans-serif; font-size:13px; color:#666; font-weight:600;">2.</span>
+        <div style="margin-top:4px; position:relative; line-height:28px; background-image: repeating-linear-gradient(transparent, transparent 27px, #d0d0d0 27px, #d0d0d0 28px); padding-top:2px; min-height:28px;">
+          <p style="font-family:'Source Sans 3',sans-serif; font-size:13px; color:#333; margin:0; line-height:28px;">Mr. Morton met Pearl.</p>
+        </div>
+      </div>
+
+      <div style="margin-bottom:10px;">
+        <span style="font-family:'Source Sans 3',sans-serif; font-size:13px; color:#666; font-weight:600;">3.</span>
+        <div style="margin-top:4px; position:relative; line-height:28px; background-image: repeating-linear-gradient(transparent, transparent 27px, #d0d0d0 27px, #d0d0d0 28px); padding-top:2px; min-height:28px;">
+          <p style="font-family:'Source Sans 3',sans-serif; font-size:13px; color:#333; margin:0; line-height:28px;">Mr. Morton gave Pearl a flower.</p>
+        </div>
+      </div>
+
+      <div style="margin-bottom:10px;">
+        <span style="font-family:'Source Sans 3',sans-serif; font-size:13px; color:#666; font-weight:600;">4.</span>
+        <div style="margin-top:4px; position:relative; line-height:28px; background-image: repeating-linear-gradient(transparent, transparent 27px, #d0d0d0 27px, #d0d0d0 28px); padding-top:2px; min-height:28px;">
+          <p style="font-family:'Source Sans 3',sans-serif; font-size:13px; color:#333; margin:0; line-height:28px;">Mr. Morton asked Pearl to marry him.</p>
+        </div>
+      </div>
+
+      <div style="margin-bottom:10px;">
+        <span style="font-family:'Source Sans 3',sans-serif; font-size:13px; color:#666; font-weight:600;">5.</span>
+        <div style="margin-top:4px; position:relative; line-height:28px; background-image: repeating-linear-gradient(transparent, transparent 27px, #d0d0d0 27px, #d0d0d0 28px); padding-top:2px; min-height:28px;">
+          <p style="font-family:'Source Sans 3',sans-serif; font-size:13px; color:#333; margin:0; line-height:28px;">Mr. Morton became very happy when Pearl said yes.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- PIE -->
+    <div class="footer" style="margin-top:auto;">
+      <div class="footer-left">INGLÉS TÉCNICO I</div>
+      <div class="footer-right">Evaluación Parcial Nº 1<br>Pág. 5 / 5</div>
+    </div>
+
+  </div>
+
+  <div class="bottom-band"></div>
+
+</div>
+<!-- ══════════════════════════════════════════ -->
+<!--  PÁGINA 6 – ACTIVIDAD 6                   -->
+<!-- ══════════════════════════════════════════ -->
+<div class="page">
+
+  <div class="top-band"></div>
+
+  <div class="inner">
+
+    <!-- ENCABEZADO PEQUEÑO -->
+    <div style="display:flex; justify-content:space-between; align-items:center; border-bottom:1.5px solid #1a3a5c; padding-bottom:10px; margin-bottom:28px;">
+      <span style="font-family:'Source Sans 3',sans-serif; font-size:12px; color:#555; font-weight:600; text-transform:uppercase; letter-spacing:1px;">Inglés Técnico I &nbsp;·&nbsp; Universidad Blas Pascal</span>
+      <span style="font-family:'Source Code Pro',monospace; font-size:10px; color:#999; letter-spacing:2px;">2026</span>
+    </div>
+
+    <!-- ACTIVIDAD 6 -->
+    <div style="margin-bottom:10px;">
+      <span style="font-family:'Source Code Pro',monospace; font-size:10px; color:#1a3a5c; letter-spacing:3px; text-transform:uppercase; background:#eef4fb; padding:3px 10px; border-left:3px solid #1a3a5c;">Actividad 6</span>
+    </div>
+
+    <h2 style="font-family:'EB Garamond',serif; font-size:28px; font-weight:700; color:#1a3a5c; line-height:1.35; margin-bottom:32px; border-bottom:1.5px solid #1a3a5c; padding-bottom:14px;">
+      Las oraciones
+    </h2>
+
+    <!-- Contenido por completar -->
+    
+    <p style="font-family:'Source Sans 3',sans-serif; font-size:13px; color:#333; margin-bottom:20px; line-height:1.6;">Decide if the following sentences are <strong>simple</strong>, <strong>complex</strong> or <strong>compound</strong>. Translate the sentences into Spanish.</p>
+
+    <!-- Tabla de oraciones -->
+    <table style="width:100%; border-collapse:collapse; margin-bottom:20px;">
+      <thead>
+        <tr>
+          <th style="border:1px solid #b0b8c8; padding:8px 12px; background:#eef4fb; font-family:'Source Sans 3',sans-serif; font-size:11px; font-weight:700; color:#1a3a5c; text-align:left; width:5%;">Nº</th>
+          <th style="border:1px solid #b0b8c8; padding:8px 12px; background:#eef4fb; font-family:'Source Sans 3',sans-serif; font-size:11px; font-weight:700; color:#1a3a5c; text-align:left; width:35%;">Oración en inglés</th>
+          <th style="border:1px solid #b0b8c8; padding:8px 12px; background:#eef4fb; font-family:'Source Sans 3',sans-serif; font-size:11px; font-weight:700; color:#1a3a5c; text-align:center; width:15%;">Tipo<br><span style="font-weight:400; font-size:10px;">(Simple/Complex/Compound)</span></th>
+          <th style="border:1px solid #b0b8c8; padding:8px 12px; background:#eef4fb; font-family:'Source Sans 3',sans-serif; font-size:11px; font-weight:700; color:#1a3a5c; text-align:left;">Traducción al español</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="border:1px solid #b0b8c8; padding:8px 10px; text-align:center; font-family:'Source Sans 3',sans-serif; font-size:12px; color:#666; font-weight:600;">1</td>
+          <td style="border:1px solid #b0b8c8; padding:8px 12px; font-family:'Source Sans 3',sans-serif; font-size:12px; color:#333;">The dog and the cat are eating in the garden.</td>
+          <td style="border:1px solid #b0b8c8; padding:8px 12px; text-align:center; font-family:'Source Sans 3',sans-serif; font-size:12px; color:#333; font-weight:600;">Simple</td>
+          <td style="border:1px solid #b0b8c8; padding:8px 12px; font-family:'Source Sans 3',sans-serif; font-size:12px; color:#333;">El perro y el gato están comiendo en el jardín.</td>
+        </tr>
+        <tr>
+          <td style="border:1px solid #b0b8c8; padding:8px 10px; text-align:center; font-family:'Source Sans 3',sans-serif; font-size:12px; color:#666; font-weight:600;">2</td>
+          <td style="border:1px solid #b0b8c8; padding:8px 12px; font-family:'Source Sans 3',sans-serif; font-size:12px; color:#333;">Jennifer went to the office whereas John went home.</td>
+          <td style="border:1px solid #b0b8c8; padding:8px 12px; text-align:center; font-family:'Source Sans 3',sans-serif; font-size:12px; color:#333; font-weight:600;">Compound</td>
+          <td style="border:1px solid #b0b8c8; padding:8px 12px; font-family:'Source Sans 3',sans-serif; font-size:12px; color:#333;">Jennifer fue a la oficina, mientras que John se fue a casa.</td>
+        </tr>
+        <tr>
+          <td style="border:1px solid #b0b8c8; padding:8px 10px; text-align:center; font-family:'Source Sans 3',sans-serif; font-size:12px; color:#666; font-weight:600;">3</td>
+          <td style="border:1px solid #b0b8c8; padding:8px 12px; font-family:'Source Sans 3',sans-serif; font-size:12px; color:#333;">The house where I live is really beautiful and cozy.</td>
+          <td style="border:1px solid #b0b8c8; padding:8px 12px; text-align:center; font-family:'Source Sans 3',sans-serif; font-size:12px; color:#333; font-weight:600;">Complex</td>
+          <td style="border:1px solid #b0b8c8; padding:8px 12px; font-family:'Source Sans 3',sans-serif; font-size:12px; color:#333;">La casa donde vivo es realmente hermosa y acogedora.</td>
+        </tr>
+        <tr>
+          <td style="border:1px solid #b0b8c8; padding:8px 10px; text-align:center; font-family:'Source Sans 3',sans-serif; font-size:12px; color:#666; font-weight:600;">4</td>
+          <td style="border:1px solid #b0b8c8; padding:8px 12px; font-family:'Source Sans 3',sans-serif; font-size:12px; color:#333;">I didn't know that Henry was on holiday.</td>
+          <td style="border:1px solid #b0b8c8; padding:8px 12px; text-align:center; font-family:'Source Sans 3',sans-serif; font-size:12px; color:#333; font-weight:600;">Complex</td>
+          <td style="border:1px solid #b0b8c8; padding:8px 12px; font-family:'Source Sans 3',sans-serif; font-size:12px; color:#333;">No sabía que Henry estaba de vacaciones.</td>
+        </tr>
+        <tr>
+          <td style="border:1px solid #b0b8c8; padding:8px 10px; text-align:center; font-family:'Source Sans 3',sans-serif; font-size:12px; color:#666; font-weight:600;">5</td>
+          <td style="border:1px solid #b0b8c8; padding:8px 12px; font-family:'Source Sans 3',sans-serif; font-size:12px; color:#333;">Mary is my best friend but sometimes she is a bit jealous.</td>
+          <td style="border:1px solid #b0b8c8; padding:8px 12px; text-align:center; font-family:'Source Sans 3',sans-serif; font-size:12px; color:#333; font-weight:600;">Compound</td>
+          <td style="border:1px solid #b0b8c8; padding:8px 12px; font-family:'Source Sans 3',sans-serif; font-size:12px; color:#333;">Mary es mi mejor amiga, pero a veces es un poco celosa.</td>
+        </tr>
+        <tr>
+          <td style="border:1px solid #b0b8c8; padding:8px 10px; text-align:center; font-family:'Source Sans 3',sans-serif; font-size:12px; color:#666; font-weight:600;">6</td>
+          <td style="border:1px solid #b0b8c8; padding:8px 12px; font-family:'Source Sans 3',sans-serif; font-size:12px; color:#333;">My favourite teacher was Mrs. Thompson because she was very kind and funny.</td>
+          <td style="border:1px solid #b0b8c8; padding:8px 12px; text-align:center; font-family:'Source Sans 3',sans-serif; font-size:12px; color:#333; font-weight:600;">Complex</td>
+          <td style="border:1px solid #b0b8c8; padding:8px 12px; font-family:'Source Sans 3',sans-serif; font-size:12px; color:#333;">Mi profesora favorita era la señora Thompson porque era muy amable y divertida.</td>
+        </tr>
+        <tr>
+          <td style="border:1px solid #b0b8c8; padding:8px 10px; text-align:center; font-family:'Source Sans 3',sans-serif; font-size:12px; color:#666; font-weight:600;">7</td>
+          <td style="border:1px solid #b0b8c8; padding:8px 12px; font-family:'Source Sans 3',sans-serif; font-size:12px; color:#333;">Peter swam in the lake and went climbing.</td>
+          <td style="border:1px solid #b0b8c8; padding:8px 12px; text-align:center; font-family:'Source Sans 3',sans-serif; font-size:12px; color:#333; font-weight:600;">Simple</td>
+          <td style="border:1px solid #b0b8c8; padding:8px 12px; font-family:'Source Sans 3',sans-serif; font-size:12px; color:#333;">Peter nadó en el lago y fue a escalar.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- PIE -->
+    <div class="footer" style="margin-top:auto;">
+      <div class="footer-left">INGLÉS TÉCNICO I</div>
+      <div class="footer-right">Evaluación Parcial Nº 1<br>Pág. 6 / 6</div>
+    </div>
+
+  </div>
+
+  <div class="bottom-band"></div>
+
+</div>
+<!-- ══════════════════════════════════════════ -->
+<!--  PÁGINA 7 – ACTIVIDAD 7                   -->
+<!-- ══════════════════════════════════════════ -->
+<div class="page">
+
+  <div class="top-band"></div>
+
+  <div class="inner">
+
+    <!-- ENCABEZADO PEQUEÑO -->
+    <div style="display:flex; justify-content:space-between; align-items:center; border-bottom:1.5px solid #1a3a5c; padding-bottom:10px; margin-bottom:28px;">
+      <span style="font-family:'Source Sans 3',sans-serif; font-size:12px; color:#555; font-weight:600; text-transform:uppercase; letter-spacing:1px;">Inglés Técnico I &nbsp;·&nbsp; Universidad Blas Pascal</span>
+      <span style="font-family:'Source Code Pro',monospace; font-size:10px; color:#999; letter-spacing:2px;">2026</span>
+    </div>
+
+    <!-- ACTIVIDAD 7 -->
+    <div style="margin-bottom:10px;">
+      <span style="font-family:'Source Code Pro',monospace; font-size:10px; color:#1a3a5c; letter-spacing:3px; text-transform:uppercase; background:#eef4fb; padding:3px 10px; border-left:3px solid #1a3a5c;">Actividad 7</span>
+    </div>
+
+    <h2 style="font-family:'EB Garamond',serif; font-size:28px; font-weight:700; color:#1a3a5c; line-height:1.35; margin-bottom:32px; border-bottom:1.5px solid #1a3a5c; padding-bottom:14px;">
+      Para integrar saberes
+    </h2>
+
+    <!-- Contenido por completar -->
+
+    <!-- PIE -->
+    <div class="footer" style="margin-top:auto;">
+      <div class="footer-left">INGLÉS TÉCNICO I</div>
+      <div class="footer-right">Evaluación Parcial Nº 1<br>Pág. 7 / 7</div>
+    </div>
+
+  </div>
+
+  <div class="bottom-band"></div>
+
+</div>
+</body>
+</html>
